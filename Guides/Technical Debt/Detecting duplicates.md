@@ -1,7 +1,13 @@
 # Detecting duplicate code
 
 ## Types of duplicates and what to do about them
-As per Fowler:
+At a project level:
+How many active branches do you have? 
+- If you receive a change request or bug report, how many branches would potentially need merge and re-test?
+How many maintenance branches do you have?
+- If a released software needs modification (e.g., migration to a new 3rd party library version), how many branches would need the modification?
+
+At the code level (within the active branch):
 1. Same expressions close together (e.g.in same class): Extract method
 2. Same expressions far away (different classes or modules): Some more extraction required
 3. Similar but not same code: first separate the same parts from not-same parts, usually comes from extraction of name-able code-sequences
